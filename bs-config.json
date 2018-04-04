@@ -1,0 +1,14 @@
+{
+    "port": 8000,
+    "open": true,
+    "logLevel": "silent",
+    "files": [
+        "./coverage/**/*.{html,htm,css,js}"
+    ],
+    "server": {
+        "baseDir": "./coverage",
+        "middleware": {
+            "0": null
+        }
+    }
+}

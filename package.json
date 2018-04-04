@@ -1,0 +1,106 @@
+{
+  "name": "samplereact",
+  "version": "1.0.0",
+  "description": "Sample working with React,TypeScript and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "jest --coverage && webpack",
+    "test": "jest --watch",
+    "test-server": "jest --coverage",
+    "test-results": "jest --coverage && lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/enzyme": "^3.1.9",
+    "@types/fetch-mock": "^5.12.2",
+    "@types/jest": "^22.1.3",
+    "@types/react": "^16.0.30",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/redux-mock-store": "0.0.13",
+    "awesome-typescript-loader": "^3.4.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fetch-mock": "^6.0.1",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.4.2",
+    "lite-server": "^2.3.0",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "^2.1.1",
+    "react-test-renderer": "^16.2.0",
+    "redux-mock-store": "^1.5.1",
+    "style-loader": "^0.20.2",
+    "ts-jest": "^22.4.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/jest/test-shim.js",
+      "<rootDir>/config/jest/test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx|mts)$": "ts-jest",
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{ts,tsx,mts}",
+      "<rootDir>/src/**/?(*.)(spec|test).{ts,tsx,mts}",
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/config",
+      "<rootDir>/node_modules"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 80,
+        "lines": 50,
+        "statements": 0
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}",
+      "src/**/*.{ts,tsx,mts}"
+    ],
+    "coverageReporters": [
+      "text",
+      "json",
+      "html"
+    ]
+  },
+  "dependencies": {
+    "@types/js-cookie": "^2.1.0",
+    "@types/redux-thunk": "^2.1.0",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.3.7",
+    "js-cookie": "^2.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}

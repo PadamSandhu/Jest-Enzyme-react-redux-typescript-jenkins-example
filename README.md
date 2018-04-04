@@ -1,1 +1,1 @@
-# Jest Enzyme react redux typescript jenkins example
+Sample Jest+Enzyme Widget
