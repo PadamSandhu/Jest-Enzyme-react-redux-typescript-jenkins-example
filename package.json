@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "jest --coverage && webpack",
-    "test": "jest --watch",
-    "test-server": "jest --coverage",
+    "build": "webpack",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
     "test-results": "jest --coverage && lite-server"
   },
   "author": "",
