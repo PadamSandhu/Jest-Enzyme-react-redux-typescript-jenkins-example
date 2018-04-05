@@ -1,0 +1,60 @@
+<testsuites name="jest tests" tests="21" failures="0" time="0.8380000000000002">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:37" time="0.623" tests="2">
+    <testcase classname="App renders properly" name="App renders properly" time="0.005">
+    </testcase>
+    <testcase classname="App Contains a connected wallet component" name="App Contains a connected wallet component" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:37" time="0.047" tests="1">
+    <testcase classname=" Creates an async action to fetch the bitcoin value" name=" Creates an async action to fetch the bitcoin value" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="rootReducer" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.039" tests="1">
+    <testcase classname="rootReducer initializes the defauult state" name="rootReducer initializes the defauult state" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="balanceReducer" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.025" tests="4">
+    <testcase classname="balanceReducer when initializing Sets a balance" name="balanceReducer when initializing Sets a balance" time="0.001">
+    </testcase>
+    <testcase classname="balanceReducer when initializing Then re-initializing reads the balance from cookies" name="balanceReducer when initializing Then re-initializing reads the balance from cookies" time="0">
+    </testcase>
+    <testcase classname="balanceReducer deposit into the balance" name="balanceReducer deposit into the balance" time="0">
+    </testcase>
+    <testcase classname="balanceReducer Withdraws from the balance" name="balanceReducer Withdraws from the balance" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Wallet" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.031" tests="6">
+    <testcase classname="Wallet renders properly" name="Wallet renders properly" time="0.003">
+    </testcase>
+    <testcase classname="Wallet displays the balance from props" name="Wallet displays the balance from props" time="0.001">
+    </testcase>
+    <testcase classname="Wallet Creates an input to deposit or withdraw into balance" name="Wallet Creates an input to deposit or withdraw into balance" time="0.001">
+    </testcase>
+    <testcase classname="Wallet when the user types into the wallet input Updates the local balance to the `state` and converts the number into string" name="Wallet when the user types into the wallet input Updates the local balance to the `state` and converts the number into string" time="0.002">
+    </testcase>
+    <testcase classname="Wallet when the user types into the wallet input The user wants to make a deposit Dispathces the `deposit()` it recives from props with local balance" name="Wallet when the user types into the wallet input The user wants to make a deposit Dispathces the `deposit()` it recives from props with local balance" time="0.001">
+    </testcase>
+    <testcase classname="Wallet when the user types into the wallet input The user wants to make a WithDrawl Dispathces the `withdraw()` it recives from props with local balance" name="Wallet when the user types into the wallet input The user wants to make a WithDrawl Dispathces the `withdraw()` it recives from props with local balance" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Loot" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.028" tests="3">
+    <testcase classname="Loot Renders Properly" name="Loot Renders Properly" time="0.002">
+    </testcase>
+    <testcase classname="Loot when mounted dispathces the `fetchBitcoin()` method it receives from props" name="Loot when mounted dispathces the `fetchBitcoin()` method it receives from props" time="0">
+    </testcase>
+    <testcase classname="Loot When there are valid bitcoin props Displays the correct bitcoin" name="Loot When there are valid bitcoin props Displays the correct bitcoin" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="This will test all the actions" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.023" tests="3">
+    <testcase classname="This will test all the actions creats an action to set the balance" name="This will test all the actions creats an action to set the balance" time="0.001">
+    </testcase>
+    <testcase classname="This will test all the actions Creates an action to deposit into the balance" name="This will test all the actions Creates an action to deposit into the balance" time="0.001">
+    </testcase>
+    <testcase classname="This will test all the actions Withdraw the balance from reducer" name="This will test all the actions Withdraw the balance from reducer" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="bitcoinReducer" errors="0" failures="0" skipped="0" timestamp="2018-04-05T20:52:38" time="0.022" tests="1">
+    <testcase classname="bitcoinReducer fetches and sets the bitcoin data" name="bitcoinReducer fetches and sets the bitcoin data" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
