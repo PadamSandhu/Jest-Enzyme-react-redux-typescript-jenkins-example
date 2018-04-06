@@ -90,7 +90,8 @@
     "coverageReporters": [
       "text",
       "json",
-      "html"
+      "html",
+      "cobertura"
     ]
   },
   "jest-junit": {
