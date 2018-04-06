@@ -93,6 +93,11 @@
       "html"
     ]
   },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "./coverage/junit.xml",
+    "usePathForSuiteName": "true"
+  },
   "dependencies": {
     "@types/js-cookie": "^2.1.0",
     "@types/redux-thunk": "^2.1.0",
