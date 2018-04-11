@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 pipeline {
   agent any
   tools {nodejs "latest"}
@@ -17,7 +18,17 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'npm test'
+        parallel(
+      webpack: {
+        sh "npm run build"
+      },
+      Testing: {
+        sh "npm run test"
+      },
+     Coverage: {
+        sh "npm run test -- --coverage"
+      }
+    )
       }
     }
   }
