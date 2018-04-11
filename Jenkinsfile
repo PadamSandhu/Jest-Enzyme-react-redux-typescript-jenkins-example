@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo sh(returnStdout: true, script: 'env')
         sh 'node -v'
-        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
     stage('build') {
@@ -32,6 +31,11 @@ pipeline {
             sh 'npm run test -- --coverage'
           }
         }
+      }
+    }
+    stage('Delete-Project-Code') {
+      steps {
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
   }
