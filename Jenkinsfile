@@ -31,30 +31,4 @@ pipeline {
     )
       }
     }
-       stage('Browser Tests'){
-      parallel (
-        "Firefox": { 
-            sh "echo Firefox"
-        },
-        "Edge": { 
-            sh "echo Edge"
-        },
-        "Safari": { 
-            sh "echo Safari"
-        },
-        "Chrome": { 
-            sh "echo Chrome"
-        },
-      )
-    }
-    stage('Dev'){
-        sh "echo Dev"
-    }
-    stage('Staging'){
-        sh "echo Staging"
-    }
-    stage('Production'){
-        sh "echo Production"
-    }
-  }
 }
