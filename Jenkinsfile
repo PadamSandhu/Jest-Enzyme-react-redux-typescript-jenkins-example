@@ -33,6 +33,36 @@ pipeline {
         }
       }
     }
+    stage('Browser Tests') {
+      parallel {
+        stage('Firefox') {
+          steps {
+            sh 'echo Firefox'
+          }
+        }
+        stage('Safari') {
+          steps {
+            sh 'echo Firefox'
+          }
+        }
+        stage('Edge') {
+          steps {
+            sh 'echo Edge'
+          }
+        }
+        stage('IE') {
+          steps {
+            sh 'echo IE'
+          }
+        }
+        stage('Chrome') {
+          steps {
+            sh 'echo Chrome'
+          }
+        }
+      }
+    }
+    
     stage('Delete-Project-Code') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
