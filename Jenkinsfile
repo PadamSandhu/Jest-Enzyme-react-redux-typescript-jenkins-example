@@ -1,12 +1,11 @@
-#!/usr/bin/env groovy
 pipeline {
   agent any
-  tools {nodejs "latest"}
   stages {
     stage('preflight') {
       steps {
         echo sh(returnStdout: true, script: 'env')
         sh 'node -v'
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
     stage('build') {
@@ -17,19 +16,26 @@ pipeline {
       }
     }
     stage('test') {
-      steps {
-        parallel(
-      webpack: {
-        sh "npm run build"
-      },
-      Testing: {
-        sh "npm run test"
-      },
-     Coverage: {
-        sh "npm run test -- --coverage"
-      }
-    )
+      parallel {
+        stage('webpack') {
+          steps {
+            sh 'npm run build'
+          }
+        }
+        stage('Testing') {
+          steps {
+            sh 'npm run test'
+          }
+        }
+        stage('Coverage') {
+          steps {
+            sh 'npm run test -- --coverage'
+          }
+        }
       }
     }
+  }
+  tools {
+    nodejs 'latest'
   }
 }
