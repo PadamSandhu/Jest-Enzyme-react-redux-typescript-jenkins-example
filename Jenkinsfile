@@ -18,17 +18,8 @@ pipeline {
     }
     stage('test') {
       steps {
-        parallel(
-      webpack: {
-        sh "npm run build"
-      },
-      Testing: {
-        sh "npm run test"
-      },
-     Coverage: {
-        sh "npm run test -- --coverage"
-      }
-    )
+        sh 'npm test'
       }
     }
+  }
 }
