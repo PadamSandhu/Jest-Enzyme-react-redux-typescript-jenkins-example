@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('preflight') {
+    stage('Preflight') {
       steps {
         echo sh(returnStdout: true, script: 'env')
         sh 'node -v'
       }
     }
-    stage('build') {
+    stage('Build') {
       steps {
         sh 'npm --version'
         sh 'git log --reverse -1'
