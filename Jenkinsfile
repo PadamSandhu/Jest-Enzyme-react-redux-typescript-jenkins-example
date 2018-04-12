@@ -1,4 +1,3 @@
-#!/usr/bin/env groovy
 pipeline {
   agent any
   stages {
@@ -63,8 +62,13 @@ pipeline {
         }
       }
     }
-    
-    stage('Delete-Project-Code') {
+    stage('Deploy to Staging') {
+      steps {
+        sh '''echo "Deploy-to-Staging"
+'''
+      }
+    }
+    stage('Delete Project Files') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
