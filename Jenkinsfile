@@ -24,6 +24,7 @@ pipeline {
         stage('Testing') {
           steps {
             sh 'npm run test'
+            junit 'coverage/junit.xml'
           }
         }
         stage('Coverage') {
