@@ -14,7 +14,7 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('test') {
+    stage('Unit Test') {
       parallel {
         stage('webpack') {
           steps {
