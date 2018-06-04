@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "lint": "tslint -c ./tslint.json -t stylish ./src/**/*.ts ./src/**/*.tsx"
+    "lint": "tslint -c ./tslint.json -t stylish ./src/**/*.ts ./src/**/*.tsx",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "test-results": "jest --coverage && lite-server"
