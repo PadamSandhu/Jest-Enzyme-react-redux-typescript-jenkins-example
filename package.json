@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
+    "lint": "tslint -c ./tslint.json -t stylish ./src/**/*.ts ./src/**/*.tsx"
     "test": "jest",
     "test-coverage": "jest --coverage",
     "test-results": "jest --coverage && lite-server"
@@ -45,7 +46,8 @@
     "typescript": "^2.6.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7"
+    "webpack-dev-server": "^2.9.7",
+    "tslint": "^5.10.0"
   },
   "jest": {
     "setupFiles": [
